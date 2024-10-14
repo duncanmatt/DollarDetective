@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9F956F32CBD270B00C4EE73 /* DollarDetectiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F956F22CBD270B00C4EE73 /* DollarDetectiveApp.swift */; };
+		C9F956F52CBD270B00C4EE73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F956F42CBD270B00C4EE73 /* ContentView.swift */; };
+		C9F956F72CBD270C00C4EE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F956F62CBD270C00C4EE73 /* Assets.xcassets */; };
+		C9F956FA2CBD270C00C4EE73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F956F92CBD270C00C4EE73 /* Preview Assets.xcassets */; };
+		C9F957042CBD270C00C4EE73 /* DollarDetectiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F957032CBD270C00C4EE73 /* DollarDetectiveTests.swift */; };
+		C9F9570E2CBD270C00C4EE73 /* DollarDetectiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F9570D2CBD270C00C4EE73 /* DollarDetectiveUITests.swift */; };
+		C9F957102CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F9570F2CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9F957002CBD270C00C4EE73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9F956E72CBD270B00C4EE73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9F956EE2CBD270B00C4EE73;
+			remoteInfo = DollarDetective;
+		};
+		C9F9570A2CBD270C00C4EE73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9F956E72CBD270B00C4EE73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9F956EE2CBD270B00C4EE73;
+			remoteInfo = DollarDetective;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9F956EF2CBD270B00C4EE73 /* DollarDetective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarDetective.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F956F22CBD270B00C4EE73 /* DollarDetectiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarDetectiveApp.swift; sourceTree = "<group>"; };
+		C9F956F42CBD270B00C4EE73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9F956F62CBD270C00C4EE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9F956F92CBD270C00C4EE73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9F956FF2CBD270C00C4EE73 /* DollarDetectiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DollarDetectiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F957032CBD270C00C4EE73 /* DollarDetectiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarDetectiveTests.swift; sourceTree = "<group>"; };
+		C9F957092CBD270C00C4EE73 /* DollarDetectiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DollarDetectiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F9570D2CBD270C00C4EE73 /* DollarDetectiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarDetectiveUITests.swift; sourceTree = "<group>"; };
+		C9F9570F2CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarDetectiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9F956EC2CBD270B00C4EE73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F956FC2CBD270C00C4EE73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F957062CBD270C00C4EE73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9F956E62CBD270B00C4EE73 = {
+			isa = PBXGroup;
+			children = (
+				C9F956F12CBD270B00C4EE73 /* DollarDetective */,
+				C9F957022CBD270C00C4EE73 /* DollarDetectiveTests */,
+				C9F9570C2CBD270C00C4EE73 /* DollarDetectiveUITests */,
+				C9F956F02CBD270B00C4EE73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9F956F02CBD270B00C4EE73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9F956EF2CBD270B00C4EE73 /* DollarDetective.app */,
+				C9F956FF2CBD270C00C4EE73 /* DollarDetectiveTests.xctest */,
+				C9F957092CBD270C00C4EE73 /* DollarDetectiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9F956F12CBD270B00C4EE73 /* DollarDetective */ = {
+			isa = PBXGroup;
+			children = (
+				C9F956F22CBD270B00C4EE73 /* DollarDetectiveApp.swift */,
+				C9F956F42CBD270B00C4EE73 /* ContentView.swift */,
+				C9F956F62CBD270C00C4EE73 /* Assets.xcassets */,
+				C9F956F82CBD270C00C4EE73 /* Preview Content */,
+			);
+			path = DollarDetective;
+			sourceTree = "<group>";
+		};
+		C9F956F82CBD270C00C4EE73 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C9F956F92CBD270C00C4EE73 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9F957022CBD270C00C4EE73 /* DollarDetectiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9F957032CBD270C00C4EE73 /* DollarDetectiveTests.swift */,
+			);
+			path = DollarDetectiveTests;
+			sourceTree = "<group>";
+		};
+		C9F9570C2CBD270C00C4EE73 /* DollarDetectiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9F9570D2CBD270C00C4EE73 /* DollarDetectiveUITests.swift */,
+				C9F9570F2CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift */,
+			);
+			path = DollarDetectiveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9F956EE2CBD270B00C4EE73 /* DollarDetective */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9F957132CBD270C00C4EE73 /* Build configuration list for PBXNativeTarget "DollarDetective" */;
+			buildPhases = (
+				C9F956EB2CBD270B00C4EE73 /* Sources */,
+				C9F956EC2CBD270B00C4EE73 /* Frameworks */,
+				C9F956ED2CBD270B00C4EE73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DollarDetective;
+			productName = DollarDetective;
+			productReference = C9F956EF2CBD270B00C4EE73 /* DollarDetective.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9F956FE2CBD270C00C4EE73 /* DollarDetectiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9F957162CBD270C00C4EE73 /* Build configuration list for PBXNativeTarget "DollarDetectiveTests" */;
+			buildPhases = (
+				C9F956FB2CBD270C00C4EE73 /* Sources */,
+				C9F956FC2CBD270C00C4EE73 /* Frameworks */,
+				C9F956FD2CBD270C00C4EE73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9F957012CBD270C00C4EE73 /* PBXTargetDependency */,
+			);
+			name = DollarDetectiveTests;
+			productName = DollarDetectiveTests;
+			productReference = C9F956FF2CBD270C00C4EE73 /* DollarDetectiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9F957082CBD270C00C4EE73 /* DollarDetectiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9F957192CBD270C00C4EE73 /* Build configuration list for PBXNativeTarget "DollarDetectiveUITests" */;
+			buildPhases = (
+				C9F957052CBD270C00C4EE73 /* Sources */,
+				C9F957062CBD270C00C4EE73 /* Frameworks */,
+				C9F957072CBD270C00C4EE73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9F9570B2CBD270C00C4EE73 /* PBXTargetDependency */,
+			);
+			name = DollarDetectiveUITests;
+			productName = DollarDetectiveUITests;
+			productReference = C9F957092CBD270C00C4EE73 /* DollarDetectiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9F956E72CBD270B00C4EE73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					C9F956EE2CBD270B00C4EE73 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					C9F956FE2CBD270C00C4EE73 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = C9F956EE2CBD270B00C4EE73;
+					};
+					C9F957082CBD270C00C4EE73 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = C9F956EE2CBD270B00C4EE73;
+					};
+				};
+			};
+			buildConfigurationList = C9F956EA2CBD270B00C4EE73 /* Build configuration list for PBXProject "DollarDetective" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9F956E62CBD270B00C4EE73;
+			productRefGroup = C9F956F02CBD270B00C4EE73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9F956EE2CBD270B00C4EE73 /* DollarDetective */,
+				C9F956FE2CBD270C00C4EE73 /* DollarDetectiveTests */,
+				C9F957082CBD270C00C4EE73 /* DollarDetectiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9F956ED2CBD270B00C4EE73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F956FA2CBD270C00C4EE73 /* Preview Assets.xcassets in Resources */,
+				C9F956F72CBD270C00C4EE73 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F956FD2CBD270C00C4EE73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F957072CBD270C00C4EE73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9F956EB2CBD270B00C4EE73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F956F52CBD270B00C4EE73 /* ContentView.swift in Sources */,
+				C9F956F32CBD270B00C4EE73 /* DollarDetectiveApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F956FB2CBD270C00C4EE73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F957042CBD270C00C4EE73 /* DollarDetectiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F957052CBD270C00C4EE73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F957102CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift in Sources */,
+				C9F9570E2CBD270C00C4EE73 /* DollarDetectiveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9F957012CBD270C00C4EE73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9F956EE2CBD270B00C4EE73 /* DollarDetective */;
+			targetProxy = C9F957002CBD270C00C4EE73 /* PBXContainerItemProxy */;
+		};
+		C9F9570B2CBD270C00C4EE73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9F956EE2CBD270B00C4EE73 /* DollarDetective */;
+			targetProxy = C9F9570A2CBD270C00C4EE73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C9F957112CBD270C00C4EE73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9F957122CBD270C00C4EE73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9F957142CBD270C00C4EE73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DollarDetective/Preview Content\"";
+				DEVELOPMENT_TEAM = P63WN893Y2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattduncan.DollarDetective.DollarDetective;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9F957152CBD270C00C4EE73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DollarDetective/Preview Content\"";
+				DEVELOPMENT_TEAM = P63WN893Y2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattduncan.DollarDetective.DollarDetective;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9F957172CBD270C00C4EE73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P63WN893Y2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattduncan.DollarDetective.DollarDetectiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DollarDetective.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DollarDetective";
+			};
+			name = Debug;
+		};
+		C9F957182CBD270C00C4EE73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P63WN893Y2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattduncan.DollarDetective.DollarDetectiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DollarDetective.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DollarDetective";
+			};
+			name = Release;
+		};
+		C9F9571A2CBD270C00C4EE73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P63WN893Y2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattduncan.DollarDetective.DollarDetectiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DollarDetective;
+			};
+			name = Debug;
+		};
+		C9F9571B2CBD270C00C4EE73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P63WN893Y2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattduncan.DollarDetective.DollarDetectiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DollarDetective;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9F956EA2CBD270B00C4EE73 /* Build configuration list for PBXProject "DollarDetective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F957112CBD270C00C4EE73 /* Debug */,
+				C9F957122CBD270C00C4EE73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9F957132CBD270C00C4EE73 /* Build configuration list for PBXNativeTarget "DollarDetective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F957142CBD270C00C4EE73 /* Debug */,
+				C9F957152CBD270C00C4EE73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9F957162CBD270C00C4EE73 /* Build configuration list for PBXNativeTarget "DollarDetectiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F957172CBD270C00C4EE73 /* Debug */,
+				C9F957182CBD270C00C4EE73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9F957192CBD270C00C4EE73 /* Build configuration list for PBXNativeTarget "DollarDetectiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F9571A2CBD270C00C4EE73 /* Debug */,
+				C9F9571B2CBD270C00C4EE73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9F956E72CBD270B00C4EE73 /* Project object */;
+}

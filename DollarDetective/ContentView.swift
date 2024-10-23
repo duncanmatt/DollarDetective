@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        UITabBar.appearance().backgroundColor = .accent
+        UITabBar.appearance().unselectedItemTintColor = .systemGray
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+        
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            CPICalculatorView()
+                .preferredColorScheme(.dark)
+                .tabItem {
+                    Label("CPI Inflation", systemImage:"dollarsign")
+            }
+            FoodPricesView()
+                .preferredColorScheme(.dark)
+                .tabItem {
+                    Label("Food Prices", systemImage: "basket")
+                }
+                
         }
-        .padding()
+        .tint(.white)
     }
 }
 

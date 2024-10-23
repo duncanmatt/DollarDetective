@@ -13,6 +13,7 @@
 		C9068EAB2CC8C14F005C0758 /* PeriodWithItemSearchSelectOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9068EAA2CC8C14F005C0758 /* PeriodWithItemSearchSelectOverlay.swift */; };
 		C9068EAD2CC8C260005C0758 /* DiscoverBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9068EAC2CC8C260005C0758 /* DiscoverBtn.swift */; };
 		C9068EAF2CC94C81005C0758 /* ItemAndPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9068EAE2CC94C81005C0758 /* ItemAndPeriod.swift */; };
+		C9068EB12CC992F5005C0758 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C9068EB02CC992F5005C0758 /* .gitignore */; };
 		C91F7EE72CBD8C0A007890AE /* InflationCalcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F7EE62CBD8C0A007890AE /* InflationCalcViewModel.swift */; };
 		C91F7EE92CBD8D56007890AE /* InflationCalculationRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F7EE82CBD8D56007890AE /* InflationCalculationRes.swift */; };
 		C91F7EEB2CBD938A007890AE /* InflationCalculationReqBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F7EEA2CBD938A007890AE /* InflationCalculationReqBody.swift */; };
@@ -61,6 +62,7 @@
 		C9068EAA2CC8C14F005C0758 /* PeriodWithItemSearchSelectOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodWithItemSearchSelectOverlay.swift; sourceTree = "<group>"; };
 		C9068EAC2CC8C260005C0758 /* DiscoverBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverBtn.swift; sourceTree = "<group>"; };
 		C9068EAE2CC94C81005C0758 /* ItemAndPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAndPeriod.swift; sourceTree = "<group>"; };
+		C9068EB02CC992F5005C0758 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C91F7EE62CBD8C0A007890AE /* InflationCalcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InflationCalcViewModel.swift; sourceTree = "<group>"; };
 		C91F7EE82CBD8D56007890AE /* InflationCalculationRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InflationCalculationRes.swift; sourceTree = "<group>"; };
 		C91F7EEA2CBD938A007890AE /* InflationCalculationReqBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InflationCalculationReqBody.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		C9F956E62CBD270B00C4EE73 = {
 			isa = PBXGroup;
 			children = (
+				C9068EB02CC992F5005C0758 /* .gitignore */,
 				C9F956F12CBD270B00C4EE73 /* DollarDetective */,
 				C9F957022CBD270C00C4EE73 /* DollarDetectiveTests */,
 				C9F9570C2CBD270C00C4EE73 /* DollarDetectiveUITests */,
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9F956FA2CBD270C00C4EE73 /* Preview Assets.xcassets in Resources */,
+				C9068EB12CC992F5005C0758 /* .gitignore in Resources */,
 				C9F956F72CBD270C00C4EE73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

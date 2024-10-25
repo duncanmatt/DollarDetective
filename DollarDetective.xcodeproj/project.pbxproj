@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9028C6D2CC9D176000FE14D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9028C6C2CC9D176000FE14D /* SnapshotHelper.swift */; };
 		C9068EA52CC8B5BE005C0758 /* InitialAmountAndPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9068EA42CC8B5BE005C0758 /* InitialAmountAndPeriodView.swift */; };
 		C9068EA72CC8B7B4005C0758 /* ChainedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9068EA62CC8B7B4005C0758 /* ChainedSwitch.swift */; };
 		C9068EA92CC8B919005C0758 /* CalculateBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9068EA82CC8B919005C0758 /* CalculateBtn.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9028C6C2CC9D176000FE14D /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		C9068EA42CC8B5BE005C0758 /* InitialAmountAndPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAmountAndPeriodView.swift; sourceTree = "<group>"; };
 		C9068EA62CC8B7B4005C0758 /* ChainedSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainedSwitch.swift; sourceTree = "<group>"; };
 		C9068EA82CC8B919005C0758 /* CalculateBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBtn.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				C9F9570D2CBD270C00C4EE73 /* DollarDetectiveUITests.swift */,
+				C9028C6C2CC9D176000FE14D /* SnapshotHelper.swift */,
 				C9F9570F2CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift */,
 			);
 			path = DollarDetectiveUITests;
@@ -398,6 +401,7 @@
 			files = (
 				C9F957102CBD270C00C4EE73 /* DollarDetectiveUITestsLaunchTests.swift in Sources */,
 				C9F9570E2CBD270C00C4EE73 /* DollarDetectiveUITests.swift in Sources */,
+				C9028C6D2CC9D176000FE14D /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

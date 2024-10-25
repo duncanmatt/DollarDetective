@@ -1,0 +1,34 @@
+{
+    "device_frame_version": "latest",
+    "default": {
+        "title": {
+          "font_weight": 800
+        },
+        "background": "./whiteBG.png",
+        "title_min_height": "30%",
+        "padding": "30x0",
+        "show_complete_frame": false,
+        "stack_title" : false,
+        "title_below_image": false,
+        "frame": "BLACK",
+        "use_platform": "IOS"
+    },
+    "data": [
+        {
+            "filter": "CPI",
+            "title": {
+                "font_size": 120,
+                "text": "Calculate",
+                "color": "#000000"
+            }
+        },
+        {
+            "filter": "Food",
+            "title": {
+                "font_size": 120,
+                "text": "Discover",
+                "color": "#000000"
+            }
+        }
+    ]
+}

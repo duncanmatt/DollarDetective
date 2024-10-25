@@ -35,6 +35,7 @@ struct CPICalculatorView: View {
                     res: $viewModel.res
                 )
                 ChainedSwitch(isChained: $viewModel.isChained, res: $viewModel.res)
+                Spacer()
                 CalculateBtn(isUploading: $viewModel.isUploading, res: viewModel.res, calculate: viewModel.calculate)
             }
             .padding()

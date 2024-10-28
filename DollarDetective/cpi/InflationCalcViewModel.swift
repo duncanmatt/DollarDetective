@@ -62,7 +62,7 @@ class InflationCalcViewModel: ObservableObject {
     func calculate() {
         self.isUploading = true
         guard let url = URL(
-            string: "https://id8td8uzr8.execute-api.us-east-2.amazonaws.com/cpi"
+            string: "https://d2pdcmz3vcmbws.cloudfront.net/cpi"
         ) else {
             self.isUploading = false
             self.isError = true

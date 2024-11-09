@@ -46,6 +46,7 @@ struct FoodPricesView: View {
             }
             .ignoresSafeArea(.keyboard)
         }
+        .preferredColorScheme(.dark)
     }
 }
 

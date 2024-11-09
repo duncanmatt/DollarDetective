@@ -44,7 +44,7 @@ class InflationCalcViewModel: ObservableObject {
     }
     
     func clearInput() {
-        amount = ""
+        self.amount = ""
     }
     
     func syncAmount() {
@@ -62,7 +62,7 @@ class InflationCalcViewModel: ObservableObject {
     func calculate() {
         self.isUploading = true
         guard let url = URL(
-            string: "https://id8td8uzr8.execute-api.us-east-2.amazonaws.com/cpi"
+            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi"
         ) else {
             self.isUploading = false
             self.isError = true
@@ -114,17 +114,13 @@ class InflationCalcViewModel: ObservableObject {
                         from: data
                     )
                     
-                    
                     let decodedData: Double = decodedRes.data
-//                    let amountDbl: Double = Double(self.amount)!
-                    
                     let rate = Double(
                         (
                             decodedData / 100
                         ) + 1
                     )
                     
-                
                     DispatchQueue.main.async {
                         self.isError = false
                         let resVal = (self.amountDbl * rate).formatted(.number.rounded(increment: 0.01).grouping(.automatic))

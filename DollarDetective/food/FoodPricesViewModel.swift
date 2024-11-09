@@ -62,7 +62,7 @@ class FoodPricesViewModel : ObservableObject {
     func fetch() {
         self.isUploading = true
         guard let url = URL(
-            string: "https://id8td8uzr8.execute-api.us-east-2.amazonaws.com/food"
+            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food"
         ) else {
             self.isUploading = false
             return

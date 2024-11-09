@@ -22,9 +22,12 @@ struct CPICalculatorView: View {
                     year: $viewModel.startYear,
                     res: $viewModel.res
                 )
-                Text(
-                    viewModel.isError ? "No data available for selected periods" : "Is worth $\(viewModel.res) in \(viewModel.endMonth) \(viewModel.endYear)"
-                )
+                HStack {
+                    Text(
+                        viewModel.isError ? "No data available for selected periods" : "Is worth $\(viewModel.res) in \(viewModel.endMonth) \(viewModel.endYear)"
+                    )
+                    Spacer()
+                }
                 .font(.title3)
                 .foregroundStyle(viewModel.isError ? .red : .white)
                 .padding(.vertical, 5)
@@ -69,6 +72,7 @@ struct CPICalculatorView: View {
                 .ignoresSafeArea(.keyboard)
                 .toolbarColorScheme(.dark, for: .navigationBar)
         }
+        .preferredColorScheme(.dark)
     }
 }
 

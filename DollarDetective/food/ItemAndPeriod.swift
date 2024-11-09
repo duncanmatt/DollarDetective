@@ -21,40 +21,42 @@ struct ItemAndPeriod: View {
     @FocusState var isInputFocused : Bool
     
     var body: some View {
-        Button {
+        Button(action: {
             withAnimation {
                 searchIsActive.toggle()
             }
-        } label: {
+            
+        }, label: {
             HStack {
                 Text(selected)
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundStyle(.white)
                 Spacer()
-                    Image(systemName:
-                            searchIsActive ? "chevron.up" : "chevron.down")
-                        .foregroundStyle(.white)
-                        .fontWeight(.semibold)
+                Image(systemName:
+                        searchIsActive ? "chevron.up" : "chevron.down")
+                .foregroundStyle(.white)
+                .fontWeight(.semibold)
+                .scaledToFit()
             }
-            .padding()
-            .background(.accent)
-            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 11, height: 11)))
+        })
+        .padding()
+        .background(.accent)
+        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 11, height: 11)))
+        VStack {
+            HStack {
+                Text("in \(month) \(year)")
+                    .font(.title2)
+                    .frame(minHeight: 50, alignment: .leading)
+                Spacer()
+            }
+            .padding(.leading, 10)
+            FoodPeriodPickerView(month: $month, year: $year, res: $res)
+                .padding(.top)
         }
-            VStack {
-                HStack {
-                    Text("in \(month) \(year)")
-                        .font(.title2)
-                        .frame(minHeight: 50, alignment: .leading)
-                    Spacer()
-                }
-                .padding(.leading, 10)
-                FoodPeriodPickerView(month: $month, year: $year, res: $res)
-                    .padding(.top)
-            }
-            .overlay {
-                if searchIsActive {
-                    ItemSearchSelect(selected: $selected, searchQuery: $searchQuery, res: $res, items: $items, searchIsActive: $searchIsActive, filterFn: filterFn, isInputFocused: _isInputFocused)
+        .overlay {
+            if searchIsActive {
+                ItemSearchSelect(selected: $selected, searchQuery: $searchQuery, res: $res, items: $items, searchIsActive:$searchIsActive, filterFn: filterFn, isInputFocused: _isInputFocused)
                         .id("item list")
                         .transition(.move(edge: searchIsActive ? .top : .bottom))
                     

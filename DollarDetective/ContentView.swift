@@ -18,15 +18,15 @@ struct ContentView: View {
     var body: some View {
         TabView {
             CPICalculatorView()
-                .preferredColorScheme(.dark)
                 .tabItem {
                     Label("CPI Inflation", systemImage:"dollarsign")
+                        .preferredColorScheme(.dark)
             }
             FoodPricesView()
-                .preferredColorScheme(.dark)
                 .tabItem {
                     Label("Food Prices", systemImage: "basket")
                 }
+                .preferredColorScheme(.dark)
                 
         }
         .preferredColorScheme(.dark)

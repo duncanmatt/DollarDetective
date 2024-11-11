@@ -30,10 +30,10 @@ struct CalculateBtn: View {
             }
             
         })
-        .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 55, maxHeight: 55)
-        .background(
-            .white,
-            in: RoundedRectangle(cornerSize: CGSize(width: 11, height: 11)))
+        .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 55)
+        .background(.white)
+        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 11, bottomLeading: 11, bottomTrailing: 11, topTrailing: 11)))
+        .buttonStyle(.plain)
         .disabled(res.count > 1)
     }
 }

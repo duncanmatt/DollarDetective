@@ -64,6 +64,7 @@ class InflationCalcViewModel: ObservableObject {
         guard let url = URL(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             string: "https://d2pdcmz3vcmbws.cloudfront.net/cpi"
 =======
             string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi"
@@ -71,6 +72,9 @@ class InflationCalcViewModel: ObservableObject {
 =======
             string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi"
 >>>>>>> 1a4aa8d (integrate edge optimized api gateway)
+=======
+            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi"
+>>>>>>> tmp-btns
         ) else {
             self.isUploading = false
             self.isError = true

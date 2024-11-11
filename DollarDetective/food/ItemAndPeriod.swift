@@ -32,17 +32,22 @@ struct ItemAndPeriod: View {
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundStyle(.white)
+                    .padding(.leading)
                 Spacer()
                 Image(systemName:
                         searchIsActive ? "chevron.up" : "chevron.down")
                 .foregroundStyle(.white)
                 .fontWeight(.semibold)
                 .scaledToFit()
+                .padding(.trailing)
             }
+            .frame(width: .infinity, height: 55)
+            .contentShape(Rectangle())
         })
-        .padding()
         .background(.accent)
-        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 11, height: 11)))
+        .clipShape(.rect(cornerRadius: 11))
+        .buttonStyle(.plain)
+                
         VStack {
             HStack {
                 Text("in \(month) \(year)")

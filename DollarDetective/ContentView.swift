@@ -11,8 +11,8 @@ struct ContentView: View {
     
     init() {
         UITabBar.appearance().backgroundColor = .accent
-        UITabBar.appearance().unselectedItemTintColor = .systemGray
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UITabBar.appearance().unselectedItemTintColor = .systemGray2
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.mainText)]
     }
         
     var body: some View {
@@ -20,17 +20,14 @@ struct ContentView: View {
             CPICalculatorView()
                 .tabItem {
                     Label("CPI Inflation", systemImage:"dollarsign")
-                        .preferredColorScheme(.dark)
             }
             FoodPricesView()
                 .tabItem {
                     Label("Food Prices", systemImage: "basket")
                 }
-                .preferredColorScheme(.dark)
                 
         }
-        .preferredColorScheme(.dark)
-        .tint(.white)
+        .tint(.mainText)
     }
 }
 

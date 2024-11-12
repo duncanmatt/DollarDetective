@@ -26,27 +26,27 @@ struct FoodPricesView: View {
                 Text(viewModel.isError ? "No data available" : "$\(viewModel.res)")
                     .font(.title2)
                     .fontWeight(.medium)
-                    .foregroundStyle(viewModel.isError ? .red : .white)
+                    .foregroundStyle(viewModel.isError ? .red : .mainText)
                 Spacer()
                 DiscoverBtn(isUploading: viewModel.isUploading, res: viewModel.res, fetch: viewModel.fetch)
             }
             .padding()
-            .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationTitle("Food Prices")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     NavigationLink {
                      DataInfoView(isCPI: false)
                     } label: {
-                        Label("info", systemImage: "info.circle")
-                            .foregroundStyle(.white)
+                        Image(systemName: "info.circle")
+                            .foregroundStyle(.mainText)
                     }
                     
                 }
             }
+            .background(.bg)
             .ignoresSafeArea(.keyboard)
         }
-        .preferredColorScheme(.dark)
+        
     }
 }
 

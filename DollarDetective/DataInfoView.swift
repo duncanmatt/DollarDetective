@@ -38,7 +38,11 @@ struct DataInfoView: View {
                 }
             }
             Spacer()
-        }.fullScreenCover(isPresented: $webViewOpen) {
+        }
+//        .onChange(of: urlString, {
+//            self.webViewOpen.toggle()
+//        })
+        .fullScreenCover(isPresented: $webViewOpen) {
             if let url = URL(string: urlString) {
                 SafariWebView(url: url)
                     .onDisappear(perform: {

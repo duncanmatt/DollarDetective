@@ -23,7 +23,7 @@ struct DiscoverBtn: View {
                 } else {
                     Text("Discover")
                         .padding()
-                        .foregroundStyle(.black)
+                        .foregroundStyle(.btnText)
                         .font(.headline)
                         .fontWeight(.medium)
                     
@@ -33,7 +33,7 @@ struct DiscoverBtn: View {
             
         })
         .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 55)
-        .background(.white)
+        .background(.mainText)
         .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 11, bottomLeading: 11, bottomTrailing: 11, topTrailing: 11)))
         .buttonStyle(.plain)
         .disabled(res.count > 1)

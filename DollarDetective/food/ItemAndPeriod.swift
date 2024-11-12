@@ -31,36 +31,27 @@ struct ItemAndPeriod: View {
                 Text(selected)
                     .font(.title2)
                     .fontWeight(.medium)
-                    .foregroundStyle(.white)
-                    .padding(.leading)
+                    .foregroundStyle(.mainText)
+//                    .padding(.leading, 1)
                 Spacer()
                 Image(systemName:
                         searchIsActive ? "chevron.up" : "chevron.down")
-                .foregroundStyle(.white)
+                .foregroundStyle(.mainText)
                 .fontWeight(.semibold)
                 .scaledToFit()
-<<<<<<< HEAD
             }
+            .contentShape(Rectangle())
         })
         .padding()
         .background(.accent)
-        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 11, height: 11)))
-=======
-                .padding(.trailing)
-            }
-            .frame(width: .infinity, height: 55)
-            .contentShape(Rectangle())
-        })
-        .background(.accent)
-        .clipShape(.rect(cornerRadius: 11))
+        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 11, bottomLeading: searchIsActive ? 0 : 11, bottomTrailing: searchIsActive ? 0 : 11, topTrailing: 11)))
         .buttonStyle(.plain)
                 
->>>>>>> tmp-btns
         VStack {
             HStack {
                 Text("in \(month) \(year)")
                     .font(.title2)
-                    .frame(minHeight: 50, alignment: .leading)
+                    .frame(minHeight: 52, alignment: .center)
                 Spacer()
             }
             .padding(.leading, 10)
@@ -76,8 +67,8 @@ struct ItemAndPeriod: View {
                 }
                 
             }
-            .zIndex(2)
-            .clipShape(.rect(topLeadingRadius: 0,
+        .zIndex(searchIsActive ? 2 : 0)
+        .clipShape(.rect(topLeadingRadius: 0,
                              bottomLeadingRadius: searchIsActive ? 11 : 0,  bottomTrailingRadius:  searchIsActive ? 11 : 0,  topTrailingRadius: 0))
             .offset(CGSize(width: 0, height: -15))
     }

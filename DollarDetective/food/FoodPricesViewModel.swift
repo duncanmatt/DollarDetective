@@ -62,19 +62,7 @@ class FoodPricesViewModel : ObservableObject {
     func fetch() {
         self.isUploading = true
         guard let url = URL(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            string: "https://d2pdcmz3vcmbws.cloudfront.net/food"
-=======
             string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food"
->>>>>>> 1a4aa8d (integrate edge optimized api gateway)
-=======
-            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food"
->>>>>>> 1a4aa8d (integrate edge optimized api gateway)
-=======
-            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food"
->>>>>>> tmp-btns
         ) else {
             self.isUploading = false
             return

@@ -30,8 +30,8 @@ struct ItemSearchSelect: View {
                         self.filterFn(curr.lowercased())
                     }
                 Image(systemName: "magnifyingglass")
-                    .foregroundStyle(.white)
-                    .padding(.trailing)
+                    .foregroundStyle(.mainText)
+                    .padding(.trailing, 12)
             }
             Divider()
                 .frame(minHeight: 2)
@@ -50,7 +50,7 @@ struct ItemSearchSelect: View {
                 }, label: {
                     Text(item)
                         .font(.headline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.mainText)
                 })
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)

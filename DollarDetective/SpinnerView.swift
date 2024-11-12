@@ -10,7 +10,7 @@ import SwiftUI
 struct SpinnerView: View {
     var body: some View {
         ProgressView()
-            .progressViewStyle(CircularProgressViewStyle(tint: .black))
+            .progressViewStyle(CircularProgressViewStyle(tint: .btnText))
             .scaleEffect(1.2, anchor: .center)
     }
 }

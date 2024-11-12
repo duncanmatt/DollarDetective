@@ -10,6 +10,7 @@ import SwiftUI
 struct FoodPricesView: View {
     @StateObject var viewModel = FoodPricesViewModel()
     @FocusState var isInputFocused : Bool
+
     
     var body: some View {
         NavigationStack {
@@ -33,14 +34,18 @@ struct FoodPricesView: View {
             .padding()
             .navigationTitle("Food Prices")
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItem(placement: .topBarLeading) {
                     NavigationLink {
-                     DataInfoView(isCPI: false)
+                        DataInfoView(isCPI: false)
                     } label: {
                         Image(systemName: "info.circle")
+                            .renderingMode(.template)
+                            .scaledToFit()
                             .foregroundStyle(.mainText)
                     }
-                    
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    SegmentedThemePicker()
                 }
             }
             .background(.bg)
@@ -50,6 +55,6 @@ struct FoodPricesView: View {
     }
 }
 
-#Preview {
-    FoodPricesView()
-}
+//#Preview {
+//    FoodPricesView()
+//}

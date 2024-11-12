@@ -10,7 +10,7 @@ import SafariServices
 
 struct DataInfoView: View {
     @State private var webViewOpen : Bool = false
-    @State private var urlString : String = "https://www.bls.gov"
+    @State private var urlString : String?
     var isCPI : Bool
     
     private let cpiText : String = "Calculations are based on Consumer Price Index data published by the Bureau of Labor Statistics. Specifically, U.S city average concerning all items regardless of seasonal adjustments."
@@ -28,24 +28,26 @@ struct DataInfoView: View {
             VStack {
                 Button("BLS.gov") {
                     self.urlString = "https://www.bls.gov"
-                    self.webViewOpen = true
+//                    self.webViewOpen = true
                 }
                 .padding()
 
                 Button("Privacy Policy") {
                     self.urlString = "https://www.termsfeed.com/live/49af2305-1691-443a-b98b-0c27f74de6e5"
-                    self.webViewOpen = true
+//                    self.webViewOpen = true
                 }
             }
             Spacer()
         }
-//        .onChange(of: urlString, {
-//            self.webViewOpen.toggle()
-//        })
+        .onChange(of: urlString, {
+            guard self.urlString != nil else { return }
+            self.webViewOpen = true
+        })
         .fullScreenCover(isPresented: $webViewOpen) {
-            if let url = URL(string: urlString) {
+            if let url = URL(string: urlString!) {
                 SafariWebView(url: url)
                     .onDisappear(perform: {
+                        self.urlString = nil
                         self.webViewOpen = false
                     })
                     .ignoresSafeArea()

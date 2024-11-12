@@ -30,9 +30,10 @@ struct DiscoverBtn: View {
                 }
                 Spacer()
             }
+            .contentShape(Rectangle())
             
         })
-        .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 55)
+        .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 50, maxHeight: 50)
         .background(.mainText)
         .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 11, bottomLeading: 11, bottomTrailing: 11, topTrailing: 11)))
         .buttonStyle(.plain)

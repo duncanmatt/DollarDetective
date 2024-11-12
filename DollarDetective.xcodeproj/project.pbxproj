@@ -28,7 +28,8 @@
 		C9D349C02CC0948200AD671F /* FoodPricesReqBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D349BF2CC0948200AD671F /* FoodPricesReqBody.swift */; };
 		C9D349C22CC0970200AD671F /* FoodPricesRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D349C12CC0970200AD671F /* FoodPricesRes.swift */; };
 		C9D349C42CC0ABA500AD671F /* ItemSearchSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D349C32CC0ABA500AD671F /* ItemSearchSelect.swift */; };
-		C9ECD9D12CE2AB5100BD6868 /* ContentView_Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECD9D02CE2AB4400BD6868 /* ContentView_Previews.swift */; };
+		C9ECD9D32CE3059200BD6868 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECD9D22CE3058F00BD6868 /* Theme.swift */; };
+		C9ECD9D52CE3C6F200BD6868 /* SegmentedThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECD9D42CE3C6EA00BD6868 /* SegmentedThemePicker.swift */; };
 		C9F956F32CBD270B00C4EE73 /* DollarDetectiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F956F22CBD270B00C4EE73 /* DollarDetectiveApp.swift */; };
 		C9F956F52CBD270B00C4EE73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F956F42CBD270B00C4EE73 /* ContentView.swift */; };
 		C9F956F72CBD270C00C4EE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F956F62CBD270C00C4EE73 /* Assets.xcassets */; };
@@ -79,7 +80,8 @@
 		C9D349C12CC0970200AD671F /* FoodPricesRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPricesRes.swift; sourceTree = "<group>"; };
 		C9D349C32CC0ABA500AD671F /* ItemSearchSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchSelect.swift; sourceTree = "<group>"; };
 		C9D349C52CC4AA6000AD671F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C9ECD9D02CE2AB4400BD6868 /* ContentView_Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_Previews.swift; sourceTree = "<group>"; };
+		C9ECD9D22CE3058F00BD6868 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C9ECD9D42CE3C6EA00BD6868 /* SegmentedThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedThemePicker.swift; sourceTree = "<group>"; };
 		C9F956EF2CBD270B00C4EE73 /* DollarDetective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarDetective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F956F22CBD270B00C4EE73 /* DollarDetectiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarDetectiveApp.swift; sourceTree = "<group>"; };
 		C9F956F42CBD270B00C4EE73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,7 +191,8 @@
 		C9F956F12CBD270B00C4EE73 /* DollarDetective */ = {
 			isa = PBXGroup;
 			children = (
-				C9ECD9D02CE2AB4400BD6868 /* ContentView_Previews.swift */,
+				C9ECD9D42CE3C6EA00BD6868 /* SegmentedThemePicker.swift */,
+				C9ECD9D22CE3058F00BD6868 /* Theme.swift */,
 				C936CCF82CC53AAE003A5FBF /* food */,
 				C936CCF72CC521CC003A5FBF /* cpi */,
 				C9D349C52CC4AA6000AD671F /* Info.plist */,
@@ -370,6 +373,7 @@
 				C936CCFA2CC589B8003A5FBF /* SpinnerView.swift in Sources */,
 				C9D349C42CC0ABA500AD671F /* ItemSearchSelect.swift in Sources */,
 				C91F7EEB2CBD938A007890AE /* InflationCalculationReqBody.swift in Sources */,
+				C9ECD9D32CE3059200BD6868 /* Theme.swift in Sources */,
 				C9068EA72CC8B7B4005C0758 /* ChainedSwitch.swift in Sources */,
 				C9F956F52CBD270B00C4EE73 /* ContentView.swift in Sources */,
 				C9068EA92CC8B919005C0758 /* CalculateBtn.swift in Sources */,
@@ -378,12 +382,12 @@
 				C9D349BC2CC08B7300AD671F /* FoodPricesView.swift in Sources */,
 				C91F7EE92CBD8D56007890AE /* InflationCalculationRes.swift in Sources */,
 				C9F956F32CBD270B00C4EE73 /* DollarDetectiveApp.swift in Sources */,
+				C9ECD9D52CE3C6F200BD6868 /* SegmentedThemePicker.swift in Sources */,
 				C936CCFC2CC5CA61003A5FBF /* DataInfoView.swift in Sources */,
 				C9D349C22CC0970200AD671F /* FoodPricesRes.swift in Sources */,
 				C9068EAD2CC8C260005C0758 /* DiscoverBtn.swift in Sources */,
 				C9D349C02CC0948200AD671F /* FoodPricesReqBody.swift in Sources */,
 				C91F7EE72CBD8C0A007890AE /* InflationCalcViewModel.swift in Sources */,
-				C9ECD9D12CE2AB5100BD6868 /* ContentView_Previews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dunc.dollar-detective";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -599,7 +603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dunc.dollar-detective";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

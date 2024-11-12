@@ -45,18 +45,20 @@ struct CPICalculatorView: View {
             .background(.bg)
             .navigationTitle("CPI Inflation")
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItem(placement: .topBarLeading) {
                     NavigationLink {
                         DataInfoView(isCPI: true)
                     } label: {
                         Image(systemName: "info.circle")
+                            .renderingMode(.template)
+                            .scaledToFit()
                             .foregroundStyle(.mainText)
                         
                     }
-                    
                 }
-    
-                
+                ToolbarItem(placement: .topBarTrailing) {
+                    SegmentedThemePicker()
+                }
                 ToolbarItemGroup(placement: .keyboard) {
                     Button("Clear") {
                         viewModel.amount = ""
@@ -78,6 +80,6 @@ struct CPICalculatorView: View {
     }
 }
 
-#Preview {
-    CPICalculatorView()
-}
+//#Preview {
+//    CPICalculatorView()
+//}

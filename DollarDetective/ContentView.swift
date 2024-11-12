@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) private var colorScheme
     
     init() {
         UITabBar.appearance().backgroundColor = .accent
@@ -19,7 +20,7 @@ struct ContentView: View {
         TabView {
             CPICalculatorView()
                 .tabItem {
-                    Label("CPI Inflation", systemImage:"dollarsign")
+                    Label("CPI Inflation", systemImage:"dollarsign.gauge.chart.lefthalf.righthalf")
             }
             FoodPricesView()
                 .tabItem {
@@ -28,7 +29,9 @@ struct ContentView: View {
                 
         }
         .tint(.mainText)
+        .preferredColorScheme(UserDefaults.standard.theme.colorScheme)
     }
+    
 }
 
 #Preview {

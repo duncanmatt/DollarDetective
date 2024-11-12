@@ -16,8 +16,7 @@ struct ChainedSwitch: View {
         ) {
             Text("chained")
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .foregroundStyle(.white)
-                .fontWeight(.medium)
+                .foregroundStyle(.mainText)
         }
         .toggleStyle(
             .switch

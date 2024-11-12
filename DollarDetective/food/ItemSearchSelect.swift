@@ -30,12 +30,12 @@ struct ItemSearchSelect: View {
                         self.filterFn(curr.lowercased())
                     }
                 Image(systemName: "magnifyingglass")
-                    .foregroundStyle(.white)
-                    .padding(.trailing)
+                    .foregroundStyle(.mainText)
+                    .padding(.trailing, 12)
             }
             Divider()
                 .frame(minHeight: 2)
-                .overlay(Color.white)
+                .overlay(Color.mainText)
             
             List(items, id: \.self) { item in
                 Button(action: {
@@ -45,12 +45,14 @@ struct ItemSearchSelect: View {
                     }
                     
                     withAnimation {
+                        isInputFocused = false
                         searchIsActive.toggle()
                     }
+                    
                 }, label: {
                     Text(item)
                         .font(.headline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.mainText)
                 })
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -59,8 +61,6 @@ struct ItemSearchSelect: View {
                 .environment(\.defaultMinListRowHeight, 0)
             }
             .listStyle(.plain)
-            
-            
         }
         .background(.accent)
     }

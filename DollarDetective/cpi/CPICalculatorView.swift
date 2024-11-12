@@ -29,9 +29,9 @@ struct CPICalculatorView: View {
                     Spacer()
                 }
                 .font(.title3)
-                .foregroundStyle(viewModel.isError ? .red : .white)
+                .foregroundStyle(viewModel.isError ? .red : .mainText)
                 .padding(.vertical, 5)
-                    
+                
                 CPIPeriodPickerView(
                     month: $viewModel.endMonth,
                     year: $viewModel.endYear,
@@ -42,40 +42,44 @@ struct CPICalculatorView: View {
                 CalculateBtn(isUploading: $viewModel.isUploading, res: viewModel.res, calculate: viewModel.calculate)
             }
             .padding()
+            .background(.bg)
             .navigationTitle("CPI Inflation")
             .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        NavigationLink {
-                            DataInfoView(isCPI: true)
-                        } label: {
-                            Label("info", systemImage: "info.circle")
-                                .foregroundStyle(.white)
-                            
-                        }
-                    }
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Button("Clear") {
-                            viewModel.amount = ""
-                        }
-                        .foregroundStyle(.red)
-                        .fontWeight(.bold)
-                    
-                        Spacer()
-                        Button("Done") {
-                            viewModel.syncAmount()
-                            isInputFocused = false
-                        }
-                        .foregroundStyle(.green)
-                        .fontWeight(.bold)
+                ToolbarItem(placement: .topBarLeading) {
+                    NavigationLink {
+                        DataInfoView(isCPI: true)
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .renderingMode(.template)
+                            .scaledToFit()
+                            .foregroundStyle(.mainText)
+                        
                     }
                 }
-                .ignoresSafeArea(.keyboard)
-                .toolbarColorScheme(.dark, for: .navigationBar)
+                ToolbarItem(placement: .topBarTrailing) {
+                    SegmentedThemePicker()
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Clear") {
+                        viewModel.amount = ""
+                    }
+                    .foregroundStyle(.red)
+                    .fontWeight(.bold)
+                    
+                    Spacer()
+                    Button("Done") {
+                        viewModel.syncAmount()
+                        isInputFocused = false
+                    }
+                    .foregroundStyle(.green)
+                    .fontWeight(.bold)
+                }
+            }
+            .ignoresSafeArea(.keyboard)
         }
-        .preferredColorScheme(.dark)
     }
 }
 
-#Preview {
-    CPICalculatorView()
-}
+//#Preview {
+//    CPICalculatorView()
+//}

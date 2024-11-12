@@ -87,7 +87,7 @@ struct CPIPeriodPickerView: View {
             Picker("Month", selection: $month) {
                 ForEach(months, id: \.self) { month in
                     Text(month)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.mainText)
                 }
             }
             .background(.accent)
@@ -97,7 +97,7 @@ struct CPIPeriodPickerView: View {
             Picker("Year", selection: $year) {
                 ForEach(years, id: \.self) { year in
                     Text(verbatim: "\(year)")
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.mainText)
                 }
             }
             .background(.accent)

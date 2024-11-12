@@ -20,7 +20,7 @@ struct InitialAmountAndPeriodView: View {
             )
             .renderingMode(.template)
             .foregroundColor(
-                .white
+                .mainText
             )
             .font(.title3)
         
@@ -29,7 +29,7 @@ struct InitialAmountAndPeriodView: View {
                 "in \(month) \(year)"
             )
             .font(.title3)
-            .foregroundStyle(.white)
+            .foregroundStyle(.mainText)
             Spacer()
         }
     }

@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) private var colorScheme
     
     init() {
         UITabBar.appearance().backgroundColor = .accent
-        UITabBar.appearance().unselectedItemTintColor = .systemGray
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UITabBar.appearance().unselectedItemTintColor = .systemGray2
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.mainText)]
     }
         
     var body: some View {
         TabView {
             CPICalculatorView()
                 .tabItem {
-                    Label("CPI Inflation", systemImage:"dollarsign")
-                        .preferredColorScheme(.dark)
+                    Label("CPI Inflation", systemImage:"dollarsign.gauge.chart.lefthalf.righthalf")
             }
             FoodPricesView()
                 .tabItem {
                     Label("Food Prices", systemImage: "basket")
                 }
-                .preferredColorScheme(.dark)
                 
         }
-        .preferredColorScheme(.dark)
-        .tint(.white)
+        .tint(.mainText)
+        .preferredColorScheme(UserDefaults.standard.theme.colorScheme)
     }
+    
 }
 
 #Preview {

@@ -10,6 +10,7 @@ import SwiftUI
 struct FoodPricesView: View {
     @StateObject var viewModel = FoodPricesViewModel()
     @FocusState var isInputFocused : Bool
+
     
     var body: some View {
         NavigationStack {
@@ -26,30 +27,34 @@ struct FoodPricesView: View {
                 Text(viewModel.isError ? "No data available" : "$\(viewModel.res)")
                     .font(.title2)
                     .fontWeight(.medium)
-                    .foregroundStyle(viewModel.isError ? .red : .white)
+                    .foregroundStyle(viewModel.isError ? .red : .mainText)
                 Spacer()
                 DiscoverBtn(isUploading: viewModel.isUploading, res: viewModel.res, fetch: viewModel.fetch)
             }
             .padding()
-            .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationTitle("Food Prices")
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItem(placement: .topBarLeading) {
                     NavigationLink {
-                     DataInfoView(isCPI: false)
+                        DataInfoView(isCPI: false)
                     } label: {
-                        Label("info", systemImage: "info.circle")
-                            .foregroundStyle(.white)
+                        Image(systemName: "info.circle")
+                            .renderingMode(.template)
+                            .scaledToFit()
+                            .foregroundStyle(.mainText)
                     }
-                    
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    SegmentedThemePicker()
                 }
             }
+            .background(.bg)
             .ignoresSafeArea(.keyboard)
         }
-        .preferredColorScheme(.dark)
+        
     }
 }
 
-#Preview {
-    FoodPricesView()
-}
+//#Preview {
+//    FoodPricesView()
+//}

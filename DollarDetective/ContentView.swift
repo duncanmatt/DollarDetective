@@ -20,7 +20,7 @@ struct ContentView: View {
         TabView {
             CPICalculatorView()
                 .tabItem {
-                    Label("CPI Inflation", systemImage:"dollarsign.gauge.chart.lefthalf.righthalf")
+                    Label("CPI Inflation", systemImage:"dollarsign")
             }
             FoodPricesView()
                 .tabItem {

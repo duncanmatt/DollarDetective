@@ -22,6 +22,7 @@ struct CPIPeriodPickerView: View {
         "July",
         "August",
         "September",
+        "October",
         "November",
         "December"
     ]

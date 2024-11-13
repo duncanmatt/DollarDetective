@@ -22,6 +22,7 @@ struct FoodPeriodPickerView: View {
         "July",
         "August",
         "September",
+        "October",
         "November",
         "December"
     ]

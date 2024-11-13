@@ -22,9 +22,9 @@ let itemsArr = Array(itemsDict.keys)
 
 class FoodPricesViewModel : ObservableObject {
     @Published var selected : String = "sliced bacon"
-    @Published var month : String = "September"
+    @Published var month : String = "October"
     @Published var year : String = "2024"
-    @Published var res : String = "6.955"
+    @Published var res : String = "6.869"
     @Published var searchQuery: String = ""
     @Published var items : [String] = itemsArr
     @Published var searchIsActive : Bool = false

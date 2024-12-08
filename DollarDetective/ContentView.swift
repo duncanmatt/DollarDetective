@@ -8,32 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.colorScheme) private var colorScheme
+    @Binding var theme : Theme
+    @State private var selection = 0
     
-    init() {
+    init(theme: Binding<Theme>) {
         UITabBar.appearance().backgroundColor = .accent
         UITabBar.appearance().unselectedItemTintColor = .systemGray2
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.mainText)]
+        self._theme = theme
     }
         
     var body: some View {
-        TabView {
-            CPICalculatorView()
+        TabView(selection: $selection) {
+            CPICalculatorView(theme: $theme)
                 .tabItem {
                     Label("CPI Inflation", systemImage:"dollarsign")
-            }
-            FoodPricesView()
+                }
+                .tag(0)
+            FoodPricesView(theme: $theme)
                 .tabItem {
                     Label("Food Prices", systemImage: "basket")
                 }
+                .tag(1)
                 
         }
+        .id(theme)
         .tint(.mainText)
-        .preferredColorScheme(UserDefaults.standard.theme.colorScheme)
+        .preferredColorScheme(theme.colorScheme)
     }
     
 }
 
 #Preview {
-    ContentView()
+    @Previewable @StateObject var themeManager = ThemeManager()
+    
+    ContentView(theme: $themeManager.currTheme)
 }

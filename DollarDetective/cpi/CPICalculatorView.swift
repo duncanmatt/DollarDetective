@@ -12,6 +12,8 @@ struct CPICalculatorView: View {
     @StateObject var viewModel = InflationCalcViewModel()
     @FocusState var isInputFocused: Bool
     
+    @Binding var theme : Theme
+    
     var body: some View {
         
         NavigationStack {
@@ -57,7 +59,7 @@ struct CPICalculatorView: View {
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    SegmentedThemePicker()
+                    SegmentedThemePicker(theme: $theme)
                 }
                 ToolbarItemGroup(placement: .keyboard) {
                     Button("Clear") {

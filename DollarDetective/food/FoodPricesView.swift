@@ -10,7 +10,8 @@ import SwiftUI
 struct FoodPricesView: View {
     @StateObject var viewModel = FoodPricesViewModel()
     @FocusState var isInputFocused : Bool
-
+    
+    @Binding var theme : Theme
     
     var body: some View {
         NavigationStack {
@@ -45,7 +46,7 @@ struct FoodPricesView: View {
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    SegmentedThemePicker()
+                    SegmentedThemePicker(theme: $theme)
                 }
             }
             .background(.bg)

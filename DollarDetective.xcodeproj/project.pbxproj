@@ -28,6 +28,7 @@
 		C9D349C02CC0948200AD671F /* FoodPricesReqBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D349BF2CC0948200AD671F /* FoodPricesReqBody.swift */; };
 		C9D349C22CC0970200AD671F /* FoodPricesRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D349C12CC0970200AD671F /* FoodPricesRes.swift */; };
 		C9D349C42CC0ABA500AD671F /* ItemSearchSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D349C32CC0ABA500AD671F /* ItemSearchSelect.swift */; };
+		C9D550242CE52D8000B3D046 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D550232CE52D5900B3D046 /* ThemeManager.swift */; };
 		C9ECD9D32CE3059200BD6868 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECD9D22CE3058F00BD6868 /* Theme.swift */; };
 		C9ECD9D52CE3C6F200BD6868 /* SegmentedThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECD9D42CE3C6EA00BD6868 /* SegmentedThemePicker.swift */; };
 		C9F956F32CBD270B00C4EE73 /* DollarDetectiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F956F22CBD270B00C4EE73 /* DollarDetectiveApp.swift */; };
@@ -80,6 +81,7 @@
 		C9D349C12CC0970200AD671F /* FoodPricesRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPricesRes.swift; sourceTree = "<group>"; };
 		C9D349C32CC0ABA500AD671F /* ItemSearchSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchSelect.swift; sourceTree = "<group>"; };
 		C9D349C52CC4AA6000AD671F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9D550232CE52D5900B3D046 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		C9ECD9D22CE3058F00BD6868 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C9ECD9D42CE3C6EA00BD6868 /* SegmentedThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedThemePicker.swift; sourceTree = "<group>"; };
 		C9F956EF2CBD270B00C4EE73 /* DollarDetective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarDetective.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 		C9F956F12CBD270B00C4EE73 /* DollarDetective */ = {
 			isa = PBXGroup;
 			children = (
+				C9D550232CE52D5900B3D046 /* ThemeManager.swift */,
 				C9ECD9D42CE3C6EA00BD6868 /* SegmentedThemePicker.swift */,
 				C9ECD9D22CE3058F00BD6868 /* Theme.swift */,
 				C936CCF82CC53AAE003A5FBF /* food */,
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D550242CE52D8000B3D046 /* ThemeManager.swift in Sources */,
 				C9D349BE2CC08FF600AD671F /* FoodPricesViewModel.swift in Sources */,
 				C936CCFE2CC5D50B003A5FBF /* SafariWebView.swift in Sources */,
 				C9068EA52CC8B5BE005C0758 /* InitialAmountAndPeriodView.swift in Sources */,
@@ -568,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.24;
+				MARKETING_VERSION = 1.25;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dunc.dollar-detective";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -606,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.24;
+				MARKETING_VERSION = 1.25;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dunc.dollar-detective";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

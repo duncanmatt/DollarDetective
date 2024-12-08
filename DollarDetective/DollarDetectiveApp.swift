@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct DollarDetectiveApp: App {
+    @StateObject var themeManager = ThemeManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(theme: $themeManager.currTheme)
         }
     }
 }

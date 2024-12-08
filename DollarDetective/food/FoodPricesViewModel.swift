@@ -19,7 +19,6 @@ let itemsDict: Dictionary<String, String> = [
 
 let itemsArr = Array(itemsDict.keys)
 
-
 class FoodPricesViewModel : ObservableObject {
     @Published var selected : String = "sliced bacon"
     @Published var month : String = "October"
@@ -61,48 +60,51 @@ class FoodPricesViewModel : ObservableObject {
     
     func fetch() {
         self.isUploading = true
+        
         guard let url = URL(
-            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food"
-        ) else {
+            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food?item=\(formatItem(selected))&period=\(formatMonth(month))_\(year)") else {
+            self.isError = true
             self.isUploading = false
             return
         }
+        
         var req = URLRequest(
             url: url
         )
-        req.httpMethod = "POST"
+        req.httpMethod = "GET"
         req.addValue(
             "application/json",
             forHTTPHeaderField: "Content-Type"
         )
-        
-        let body = FoodPricesReqBody(id: UUID(), year: self.year, month: self.formatMonth(self.month), item: self.formatItem(self.selected))
-        let bodyJson = try? JSONEncoder().encode(body)
-        
-        req.httpBody = bodyJson
-        
-        URLSession.shared.dataTask(with: req) { data, response, error in 
+                
+        URLSession.shared.dataTask(with: req) { data, response, error in
             guard let data = data, error == nil else {
-                self.isUploading = false
+                DispatchQueue.main.async {
+                    self.isError = true
+                    self.isUploading = false
+                }
                 return
             }
+                    
             
             do {
-                
                 let decodedRes = try JSONDecoder().decode(FoodPricesRes.self, from: data)
                 let decodedData = decodedRes.data
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.async  {    
                     self.isError = false
                     self.res = String(format: "%.2f", decodedData)
                     self.isUploading = false
                 }
-            } catch {
-                self.isError = true
-                self.isUploading = false
+            } catch let error {
+                DispatchQueue.main.async {
+                    self.isError = true
+                    self.isUploading = false
+                }
+                print("ERROR: \(error)")
             }
-            
+                    
         }.resume()
-        
+                
     }
 }

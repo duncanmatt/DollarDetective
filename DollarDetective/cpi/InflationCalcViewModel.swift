@@ -60,77 +60,67 @@ class InflationCalcViewModel: ObservableObject {
     
     func calculate() {
         self.isUploading = true
+        
         guard let url = URL(
-            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi"
+            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi?seriesId=\(isChained ? "S" : "C")UUR0000SA0&startPeriod=\(self.formatMonth(self.startMonth))_\(self.startYear)&endPeriod=\(self.formatMonth(self.endMonth))_\(self.endYear)"
         ) else {
             self.isUploading = false
             self.isError = true
             return
         }
+        
         var req = URLRequest(
             url: url
         )
-        req.httpMethod = "POST"
+        req.httpMethod = "GET"
         req.addValue(
             "application/json",
             forHTTPHeaderField: "Content-Type"
         )
-        
-        let body = InflationCalculationReqBody(
-            id: UUID(),
-            startMonth: self.formatMonth(self.startMonth),
-            startYear: self.startYear,
-            endMonth: self.formatMonth(self.endMonth),
-            endYear: self.endYear,
-            seriesId: "\(isChained ? "S" : "C")UUR0000SA0"
-        )
-        
-            let bodyJson = try? JSONEncoder().encode(
-                body
-            )
-            req.httpBody = bodyJson
             
-            URLSession.shared.dataTask(
-                with: req
-            ) {
-                data,
-                response,
-                error in
-                guard let data = data,
-                      error == nil else {
-                    print(
-                        error as Any
-                    )
-                    self.isUploading = false
-                    self.isError = true
-                    return
-                }
+        URLSession.shared.dataTask(
+            with: req
+        ) {
+            data,
+            response,
+            error in
+            guard let data = data,
+                    error == nil else {
+                print(
+                    error as Any
+                )
+                self.isError = true
+                self.isUploading = false
+                return
+            }
                 
                 
-                do {
-                    let decodedRes = try JSONDecoder().decode(
-                        InflationCalculationRes.self,
-                        from: data
-                    )
+            do {
+                let decodedRes = try JSONDecoder().decode(
+                    InflationCalculationRes.self,
+                    from: data
+                )
                     
-                    let decodedData: Double = decodedRes.data
-                    let rate = Double(
-                        (
-                            decodedData / 100
-                        ) + 1
-                    )
+                let decodedData: Double = decodedRes.data
+                let rate = Double(
+                    (
+                        decodedData
+                    ) + 1
+                )
                     
-                    DispatchQueue.main.async {
-                        self.isError = false
-                        let resVal = (self.amountDbl * rate).formatted(.number.rounded(increment: 0.01).grouping(.automatic))
-                        self.res = resVal
-                        self.isUploading = false
-                    }
-                } catch {
-                    self.isError = true
+                DispatchQueue.main.async {
+                    self.isError = false
+                    let resVal = (self.amountDbl * rate).formatted(.number.rounded(increment: 0.01).grouping(.automatic))
+                    self.res = resVal
                     self.isUploading = false
                 }
-                
+            } catch let error {
+                DispatchQueue.main.async {
+                    self.isError = true
+                    self.isUploading = false
+                }
+                print(error)
+            }
                 
         }.resume()
         

@@ -24,13 +24,13 @@ let months : Dictionary = [
 ]
 
 class InflationCalcViewModel: ObservableObject {
-    @Published var startMonth: String = "October"
+    @Published var startMonth: String = "November"
     @Published var startYear: String = "2023"
-    @Published var endMonth: String = "October"
+    @Published var endMonth: String = "November"
     @Published var endYear: String = "2024"
     @Published var amount : String = "1000.00"
     @Published var amountDbl : Double = 1000.00
-    @Published var res : String = "1,025.98"
+    @Published var res : String = "1,027.49"
     @Published var isChained : Bool = false
     @Published var isUploading : Bool = false
     @Published var isError : Bool = false

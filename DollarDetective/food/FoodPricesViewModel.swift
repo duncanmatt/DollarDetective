@@ -20,10 +20,10 @@ let itemsDict: Dictionary<String, String> = [
 let itemsArr = Array(itemsDict.keys)
 
 class FoodPricesViewModel : ObservableObject {
-    @Published var selected : String = "sliced bacon"
-    @Published var month : String = "October"
+    @Published var selected : String = "ground beef"
+    @Published var month : String = "November"
     @Published var year : String = "2024"
-    @Published var res : String = "6.869"
+    @Published var res : String = "5.63"
     @Published var searchQuery: String = ""
     @Published var items : [String] = itemsArr
     @Published var searchIsActive : Bool = false
@@ -35,8 +35,8 @@ class FoodPricesViewModel : ObservableObject {
     }
     
     private func formatItem(_ item: String) -> String {
-        if let yearVal = itemsDict[item] {
-            return yearVal
+        if let itemCode = itemsDict[item] {
+            return itemCode
         }
         return ""
     }

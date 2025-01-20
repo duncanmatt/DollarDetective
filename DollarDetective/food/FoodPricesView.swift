@@ -52,6 +52,7 @@ struct FoodPricesView: View {
             .background(.bg)
             .ignoresSafeArea(.keyboard)
         }
+        .task {_ = await viewModel.fetch()}
         
     }
 }

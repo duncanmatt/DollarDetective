@@ -11,10 +11,14 @@ struct DiscoverBtn: View {
     var isUploading : Bool
     var res : String
     
-    var fetch : () -> Void
+    var fetch : () async -> Void
     
     var body: some View {
-        Button(action: fetch, label: {
+        Button(action: {
+            Task {
+                _ = await fetch()
+            }
+        }, label: {
             HStack {
                 Spacer()
                 if isUploading {

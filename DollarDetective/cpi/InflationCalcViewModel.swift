@@ -24,13 +24,13 @@ let months : Dictionary = [
 ]
 
 class InflationCalcViewModel: ObservableObject {
-    @Published var startMonth: String = "November"
+    @Published var startMonth: String = "December"
     @Published var startYear: String = "2023"
-    @Published var endMonth: String = "November"
+    @Published var endMonth: String = "December"
     @Published var endYear: String = "2024"
     @Published var amount : String = "1000.00"
     @Published var amountDbl : Double = 1000.00
-    @Published var res : String = "1,027.49"
+    @Published var res : String = "0.0"
     @Published var isChained : Bool = false
     @Published var isUploading : Bool = false
     @Published var isError : Bool = false
@@ -58,71 +58,74 @@ class InflationCalcViewModel: ObservableObject {
         }
     }
     
-    func calculate() {
-        self.isUploading = true
-        
-        guard let url = URL(
-            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi?seriesId=\(isChained ? "S" : "C")UUR0000SA0&startPeriod=\(self.formatMonth(self.startMonth))_\(self.startYear)&endPeriod=\(self.formatMonth(self.endMonth))_\(self.endYear)"
-        ) else {
-            self.isUploading = false
-            self.isError = true
-            return
-        }
-        
-        var req = URLRequest(
-            url: url
-        )
-        req.httpMethod = "GET"
-        req.addValue(
-            "application/json",
-            forHTTPHeaderField: "Content-Type"
-        )
+    func calculate() async {
+        DispatchQueue.main.async {
             
-        URLSession.shared.dataTask(
-            with: req
-        ) {
-            data,
-            response,
-            error in
-            guard let data = data,
-                    error == nil else {
-                print(
-                    error as Any
-                )
-                self.isError = true
+            
+            self.isUploading = true
+            
+            guard let url = URL(
+                string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/cpi?seriesId=\(self.isChained ? "S" : "C")UUR0000SA0&startPeriod=\(self.formatMonth(self.startMonth))_\(self.startYear)&endPeriod=\(self.formatMonth(self.endMonth))_\(self.endYear)"
+            ) else {
                 self.isUploading = false
+                self.isError = true
                 return
             }
-                
-                
-            do {
-                let decodedRes = try JSONDecoder().decode(
-                    InflationCalculationRes.self,
-                    from: data
-                )
-                    
-                let decodedData: Double = decodedRes.data
-                let rate = Double(
-                    (
-                        decodedData
-                    ) + 1
-                )
-                    
-                DispatchQueue.main.async {
-                    self.isError = false
-                    let resVal = (self.amountDbl * rate).formatted(.number.rounded(increment: 0.01).grouping(.automatic))
-                    self.res = resVal
-                    self.isUploading = false
-                }
-            } catch let error {
-                DispatchQueue.main.async {
+            
+            var req = URLRequest(
+                url: url
+            )
+            req.httpMethod = "GET"
+            req.addValue(
+                "application/json",
+                forHTTPHeaderField: "Content-Type"
+            )
+            
+            URLSession.shared.dataTask(
+                with: req
+            ) {
+                data,
+                response,
+                error in
+                guard let data = data,
+                      error == nil else {
+                    print(
+                        error as Any
+                    )
                     self.isError = true
                     self.isUploading = false
+                    return
                 }
-                print(error)
-            }
                 
-        }.resume()
-        
+                
+                do {
+                    let decodedRes = try JSONDecoder().decode(
+                        InflationCalculationRes.self,
+                        from: data
+                    )
+                    
+                    let decodedData: Double = decodedRes.data
+                    let rate = Double(
+                        (
+                            decodedData
+                        ) + 1
+                    )
+                    
+                    DispatchQueue.main.async {
+                        self.isError = false
+                        let resVal = (self.amountDbl * rate).formatted(.number.rounded(increment: 0.01).grouping(.automatic))
+                        self.res = resVal
+                        self.isUploading = false
+                    }
+                } catch let error {
+                    DispatchQueue.main.async {
+                        self.isError = true
+                        self.isUploading = false
+                    }
+                    print(error)
+                }
+                
+            }.resume()
+        }
     }
 }

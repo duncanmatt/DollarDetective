@@ -21,9 +21,9 @@ let itemsArr = Array(itemsDict.keys)
 
 class FoodPricesViewModel : ObservableObject {
     @Published var selected : String = "ground beef"
-    @Published var month : String = "November"
+    @Published var month : String = "December"
     @Published var year : String = "2024"
-    @Published var res : String = "5.63"
+    @Published var res : String = "0.0"
     @Published var searchQuery: String = ""
     @Published var items : [String] = itemsArr
     @Published var searchIsActive : Bool = false
@@ -58,53 +58,54 @@ class FoodPricesViewModel : ObservableObject {
     }
 
     
-    func fetch() {
-        self.isUploading = true
-        
-        guard let url = URL(
-            string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food?item=\(formatItem(selected))&period=\(formatMonth(month))_\(year)") else {
-            self.isError = true
-            self.isUploading = false
-            return
-        }
-        
-        var req = URLRequest(
-            url: url
-        )
-        req.httpMethod = "GET"
-        req.addValue(
-            "application/json",
-            forHTTPHeaderField: "Content-Type"
-        )
-                
-        URLSession.shared.dataTask(with: req) { data, response, error in
-            guard let data = data, error == nil else {
-                DispatchQueue.main.async {
-                    self.isError = true
-                    self.isUploading = false
-                }
+    func fetch() async {
+        DispatchQueue.main.async {
+            self.isUploading = true
+            
+            guard let url = URL(
+                string: "https://l3x75qqjdh.execute-api.us-east-2.amazonaws.com/api/food?item=\(self.formatItem(self.selected))&period=\(self.formatMonth(self.month))_\(self.year)") else {
+                self.isError = true
+                self.isUploading = false
                 return
             }
-                    
             
-            do {
-                let decodedRes = try JSONDecoder().decode(FoodPricesRes.self, from: data)
-                let decodedData = decodedRes.data
+            var req = URLRequest(
+                url: url
+            )
+            req.httpMethod = "GET"
+            req.addValue(
+                "application/json",
+                forHTTPHeaderField: "Content-Type"
+            )
+            
+            URLSession.shared.dataTask(with: req) { data, response, error in
+                guard let data = data, error == nil else {
+                    DispatchQueue.main.async {
+                        self.isError = true
+                        self.isUploading = false
+                    }
+                    return
+                }
                 
-                DispatchQueue.main.async  {    
-                    self.isError = false
-                    self.res = String(format: "%.2f", decodedData)
-                    self.isUploading = false
-                }
-            } catch let error {
-                DispatchQueue.main.async {
-                    self.isError = true
-                    self.isUploading = false
-                }
-                print("ERROR: \(error)")
-            }
+                
+                do {
+                    let decodedRes = try JSONDecoder().decode(FoodPricesRes.self, from: data)
+                    let decodedData = decodedRes.data
                     
-        }.resume()
+                    DispatchQueue.main.async  {
+                        self.isError = false
+                        self.res = String(format: "%.2f", decodedData)
+                        self.isUploading = false
+                    }
+                } catch let error {
+                    DispatchQueue.main.async {
+                        self.isError = true
+                        self.isUploading = false
+                    }
+                    print("ERROR: \(error)")
+                }
                 
+            }.resume()
+        }
     }
 }

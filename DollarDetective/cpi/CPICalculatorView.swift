@@ -79,6 +79,9 @@ struct CPICalculatorView: View {
             }
             .ignoresSafeArea(.keyboard)
         }
+        .task {
+            _ = await viewModel.calculate()
+        }
     }
 }
 

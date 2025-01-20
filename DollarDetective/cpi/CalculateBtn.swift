@@ -10,10 +10,14 @@ import SwiftUI
 struct CalculateBtn: View {
     @Binding var isUploading : Bool
     var res : String
-    var calculate : () -> Void
+    var calculate : () async -> Void
     
     var body: some View {
-        Button(action: calculate, label: {
+        Button(action: {
+            Task {
+                _ = await calculate()
+            }
+        }, label: {
             HStack {
                 Spacer()
                 if isUploading  {
